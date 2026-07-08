@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport";width=device-width;initial-scale=1.0>
+  </head>
+  <body style="background-color:black;color:white">
+    <img src="./cafe.jpg" alt="Кафе" width="330" height="260" style="border:5px solid white;border-radius:15px">
+    <hr style="background-color:red;border:none;border-radius:10px;height:2px">
+    
+      <h2 style="text-align:center;border:none;font-weight:bold"> Крафт Бургер 
+  </h2>
+  <hr style="background-color:red;border:none;border-radius:10px;height:2px">
+    
+    <h3 style="font-weight:bold;text-align:center;"
+    >Интересные факты о кафе
+    </h3>
+    <hr style="height:2px;background-color:red;border:none;border-radius:10px;"
+    >
+    <button style="width:70px;height:60px;background-color:violet;border-radius:10px;border:3px solid yellow" onclick="first_fact()">1 факт
+    </button>
+    
+   <button style="width:70px;height:60px;background-color:violet;border-radius:10px;border:3px solid yellow" onclick="second_fact()">2 факт
+   </button>
+   <button style="width:70px;height:60px;background-color:violet;border-radius:10px;border:3px solid yellow" onclick="third_fact()">3 факт
+   </button>
+   
+   <button style="width:70px;height:60px;background-color:violet;border-radius:10px;border:3px solid yellow" onclick="four_fact()">4 факт
+   </button>
+
+  <hr style="height:2px;border:none;border-radius:10px;background-color:red">
+  
+  <h3 style="border:none;font-weight:bold;text-align:center;">«Настоящий крафт, который тает во рту 🤤»100% сочная мраморная говядина, фирменный соус и пышная булочка. Привезем быстрее, чем вы успеете проголодаться!
+  </h3>
+  
+  <hr style="border:none;background-color:red;height:2px;border-radius:10px">
+  
+  <h4 style="border:none;font-weight:bold; text-align:center;color:yellow">Меню:
+  </h4>
+  <hr style="border:none;border-radius:10px;background-color:red;height:2px">
+  <ol>
+    <li style="font-weight:bold;color:red " >Габургер: 180</li>
+    <li style="font-weight:bold;color:red " >Кола: 90</li>
+    <li style="font-weight:bold;color:red;">Картошка Фри: 150</li>
+    <li style="font-weight:bold;color:red;">Пицца: 260</li>
+    
+  </ol>
+  <hr style="background-color:red;border:none;border-radius:10px;height:2px">
+  <div style="display : flex;flex-direction:row;flex-wrap: wrap;gap:10px;justify-content:center;margin:20px;">
+  <button style="background-color:red;color:white;border:3px solid white;border-radius:10px;height:80px;width:90px" onclick="adGamburger()">Гамбургер (180 р.)
+  </button>
+  <button style="background-color:red;color:white;border:3px solid white;border-radius:10px;height:80px;width:90px"onclick="adCola()">Кола(90 р.)
+  </button>
+  
+  <button style="background-color:red;color:white;border-radius:10px;border:3px solid white;height:80px;width:90px;" onclick="adPotatosFree()">
+    Картошка Фри(150 р.)
+  </button>
+  <button style="background-color:red;color:white;height:80px;width:90px;border:3px solid white;border-radius:10px" onclick="adPizza()">Пицца(260 р.)
+  </button>
+  
+  
+  <button style="background-color:red;color:white;border:3px solid white;border-radius:10px;height:80px;width:90px" onclick="delet()">Очистить корзину
+  </button>
+  </div>
+  
+  
+  <p style="font-weight:bold" id="final-result">
+    
+  </p>
+  
+  <script>
+    let totalPrise = 0
+    
+    
+    function adGamburger() {
+      totalPrise = totalPrise + 180
+      document.getElementById("final-result").innerText = "Вот ваш габургер и того с вас " + totalPrise + " рублей.Приятного аппетита!";
+    }
+    function adCola() {
+      totalPrise = totalPrise + 90
+      document.getElementById("final-result").innerText = "Вот ваша кола и того с вас " + totalPrise + " рублей. Приятного аппетита!";
+    }
+    function adPotatosFree() {
+      totalPrise = totalPrise + 150
+      document.getElementById("final-result").innerText = "Вот ваша картошка фри и того с вас" + totalPrise + " рублей. Приятного аппетита ";
+    }
+    function adPizza() {
+      totalPrise = totalPrise + 260 
+      document.getElementById("final-result").innerText = "Вот ваша пицца и того с вас " + totalPrise + " рублей.Приятного аппетита";
+    }
+    
+    
+    function delet() {
+      totalPrise = totalPrise - totalPrise
+      document.getElementById("final-result").innerText = "Корзина пуста!"
+    }
+    
+    function first_fact() {
+      document.getElementById("final-result").innerText = "👑 Самый дорогой бургер в мире: В Нидерландах приготовили бургер под названием «Золотой мальчик» (The Golden Boy). В его состав входят мраморная говядина вагю, белые трюфели, икра и даже съедобное золото! Стоит такой бургер около 5 000 евро.";
+    }
+    
+    function second_fact() {
+      document.getElementById("final-result").innerText = "🍔 Бургер-рекордсмен: Самый большой бургер в истории весил более 1 тонны (1164 кг)! Его приготовили в США, а диаметр гиганта составил целых 3 метра. На его создание ушло огромное количество мяса, сыра и целая куча времени.";
+    }
+    
+    function third_fact() {
+      document.getElementById("final-result").innerText = "📜 Хитрый трюк рестораторов: В профессиональных меню часто не пишут значки валют (руб., $, €) и не ставят лишние нули. Исследования показывают, что простое число (например, «180» вместо «180 р.») психологически пугает покупателя меньше, и люди охотнее тратят деньги, так как не думают о расставании с финансами. У вас на кнопках сейчас написано «180 р.», так что вы можете поэкспериментировать и оставить просто цифры!";
+    }
+    
+    function four_fact() {
+      document.getElementById("final-result").innerText = "☕ Первое в мире кафе: Первая кофейня в истории открылась очень давно — в 1475 году в Константинополе (сейчас это Стамбул). Она называлась «Кива Хан» и быстро стала местом, где люди собирались не просто поесть, а пообщаться и обсудить новости.";
+    }
+    
+  </script>
+  </body>
+</html>
